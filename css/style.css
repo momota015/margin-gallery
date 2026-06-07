@@ -1,0 +1,606 @@
+@charset "UTF-8";
+
+/* 基準フォントサイズを16pxに指定 */
+html {
+    font-size: 100%;
+    /* フォントファミリー */
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+    scroll-behavior: smooth;
+}
+
+/* * {
+    outline: 1px solid red;
+} */
+
+/* ボックスの横幅を罫線込みで計算 */
+* {
+    box-sizing: border-box;
+}
+
+/* CSSリセット(各要素の余白をなし・太字をなし) */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+h1,
+h2,
+p {
+    font-weight: normal;
+}
+
+
+/* ヘッダー */
+
+header {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+        url(../images/home.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.nav {
+    background-color: rgba(67, 67, 67, 0.768);
+    padding: 15px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.3rem;
+    transition: letter-spacing 0.4s;
+}
+
+.nav a:hover {
+    letter-spacing: 0.3em;
+}
+
+.nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 0px;
+}
+
+
+/* ヘッダー（アーティスト） */
+.artist-page header {
+    min-height: 20vh;
+}
+
+.page-title {
+    color: #fff;
+    text-align: center;
+    padding: 2em;
+}
+
+.page-title h1 {
+    font-size: 2.5rem;
+    letter-spacing: 0.1em;
+    text-shadow: 3px 4px 3px #333;
+}
+
+/* ヘッダー（お問い合わせ） */
+.contact-page header {
+    min-height: 20vh;
+}
+
+/* -ヒーロー */
+.items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #333;
+    padding: 2% 0;
+}
+
+.item1 {
+    margin-bottom: 20px;
+    font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* 余白 */
+.ja-title {
+    font-family: "WDXL Lubrifont JP N", sans-serif;
+    letter-spacing: 0.8em;
+    margin-right: -0.8em;
+}
+
+/* Margin */
+.en-title {
+    letter-spacing: 0.4em;
+    font-size: 0.6em;
+    margin-right: -0.6em;
+    margin-top: 0.2em;
+}
+
+/* Exhibition 2026 */
+.item2 {
+    /* align-self: flex-end; */
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: 0.01em;
+    /* フォント */
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5rem;
+}
+
+.item3 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Ilustration&Photography */
+.item4 {
+    /* align-self: flex-end; */
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: 0.01em;
+    /* フォント */
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 5rem;
+
+}
+
+.hero {
+    width: 50%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+/* －メイン */
+
+main h2 {
+    margin-bottom: 80px;
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: 0.15em;
+}
+
+
+section {
+    padding: 120px 12vw;
+}
+
+
+/* アバウト */
+
+.About {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.About p {
+    width: 45%;
+    margin-right: auto;
+    line-height: 2.5;
+}
+
+.About p strong {
+    font-size: 1.5rem;
+}
+
+
+/* アーティスト */
+.Artists {
+    display: grid;
+    place-content: center;
+    /* grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); */
+    gap: 60px;
+    grid-template-columns: repeat(4, 1fr);
+    /* margin: 0 auto */
+    /* max-width: 1200px */
+}
+
+.Artist {
+    text-align: center;
+}
+
+.Artist p {
+    margin-top: 20px;
+}
+
+.Artist img {
+    /* max-width: 100%; */
+    /* width: 300px;
+    height: 400px; */
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 0;
+    transition: 0.4s;
+    display: block;
+}
+
+.Artist a {
+    overflow: hidden;
+    display: block;
+}
+
+.Artist a img:hover {
+    transform: scale(1.1);
+}
+
+
+.Artist b {
+    font-size: 1.3rem
+}
+
+/* メイン（アーティストページ） */
+.artist-page .Artists {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.artist-page .artist-profile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px;
+    align-items: start;
+}
+
+.artist-page .Artist img {
+    width: 100%;
+    max-width: 380px;
+    height: 480px;
+}
+
+.artist-page .A-text {
+    max-width: 600px;
+}
+
+.artist-page .A-text span {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.artist-page .A-text strong {
+    font-size: 1.8rem;
+}
+
+.artist-page .A-text small {
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+.artist-page .A-text p {
+    line-height: 2;
+    font-size: 1.2rem;
+}
+
+
+
+/* ニュース */
+
+.date {
+    display: block;
+    font-size: 0.9rem;
+    letter-spacing: 0.15em;
+    margin-bottom: 15px;
+    color: #888;
+}
+
+.news-list {
+    list-style: none;
+}
+
+.news-list li {
+    padding: 40px 0;
+    border-bottom: 1px solid #333;
+}
+
+.news-list p {
+    line-height: 2;
+}
+
+
+/* アクセス */
+
+/* アクセステーブル */
+.shop-info {
+    border-collapse: collapse;
+    width: 40%;
+}
+
+.shop-info th,
+.shop-info td {
+    border-bottom: 1px solid #333;
+    padding: 20px 0;
+    text-align: left;
+}
+
+.shop-info th {
+    font-weight: normal;
+    width: 30%;
+    letter-spacing: 0.1em;
+}
+
+.maps {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 80px;
+}
+
+/* 地図サイズ */
+.maps iframe {
+    width: 50%;
+    height: 400px;
+}
+
+
+/* お問い合わせ  */
+.contact-link {
+    text-align: center;
+    background-color: #f8f8f8;
+}
+
+.contact-text {
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.contact-btn {
+    display: inline-block;
+    padding: 12px 60px;
+    border: 1px solid #333;
+    text-decoration: none;
+    color: #333;
+    letter-spacing: 0.2em;
+}
+
+/* お問い合わせページ */
+.contact-page form {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-page label {
+    display: block;
+    margin-top: 25px;
+}
+
+.contact-page input,
+.contact-page textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+.contact-page button {
+    width: 100%;
+    margin-top: 30px;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+
+
+/* フッター */
+.copyright {
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.768);
+    padding: 15px;
+}
+
+/* ページトップ */
+.page-top {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    text-decoration: none;
+    color: #333;
+
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.2rem;
+    opacity: 0.5;
+}
+
+.arrow {
+    margin-bottom: 5px;
+    font-size: 2rem;
+}
+
+.page-top .text {
+    writing-mode: vertical-rl;
+}
+
+.page-top:hover {
+    opacity: 1;
+}
+
+/* バックホーム */
+.back-home {
+    text-decoration: none;
+    color: #333;
+    letter-spacing: 0.2rem;
+    opacity: 0.5;
+    margin-left: 30px;
+    font-size: 1.5rem;
+}
+
+.back-home:hover {
+    opacity: 1;
+}
+
+
+/* モバイル対応 */
+
+@media screen and (max-width: 767px) {
+
+    .nav ul {
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+
+    /* ヒーロー */
+    .items {
+        flex-direction: column;
+        padding-top: 8%;
+    }
+
+    .item1 {
+        font-size: 2rem;
+        margin-top: 20px;
+    }
+
+    .item2 {
+        writing-mode: horizontal-tb;
+        font-size: 2rem;
+        order: 99;
+        padding: 10px;
+    }
+
+    .item3 {
+        aspect-ratio: 3 / 4;
+        overflow: hidden;
+    }
+
+    .item3 img {
+        width: 70%;
+        height: 90%;
+        /* margin: 0 auto ; */
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .item4 {
+        writing-mode: horizontal-tb;
+        font-size: 2rem;
+    }
+
+    .hero {
+        width: 90%;
+        height: auto;
+        margin-bottom: 0;
+    }
+
+
+
+    header {
+        min-height: 100vh;
+    }
+
+
+    /* メイン */
+
+    section {
+        padding: 70px 6vw;
+    }
+
+    main h2 {
+        margin-bottom: 30px;
+        font-size: 1.8rem;
+    }
+
+    /* アバウト */
+    .About {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .About p {
+        width: 100%;
+    }
+
+    .About p strong {
+        font-size: 1.3rem;
+    }
+
+    .About img {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    /* アーティスト */
+    .Artists {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+
+    /* アクセス */
+    .maps {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .shop-info {
+        width: 100%;
+    }
+
+    .maps iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+    /* ページっトップ */
+    .page-top {
+        right: 20px;
+        bottom: 20px;
+    }
+
+
+    /* アーティストページ */
+    .artist-page .artist-profile {
+        grid-template-columns: 1fr;
+    }
+
+    /* .artist-page .Artist img {
+        height: 460px;
+    } */
+
+    .artist-page .back-home {
+        margin-left: 10px;
+    }
+
+    .page-title h1 {
+        font-size: 2.5rem;
+    }
+
+
+}
